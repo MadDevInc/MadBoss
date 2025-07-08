@@ -1,0 +1,172 @@
+/* Custom CSS for MadBoss Wiki */
+
+:root {
+  --md-primary-fg-color: #673ab7;
+  --md-primary-fg-color--light: #9c27b0;
+  --md-primary-fg-color--dark: #512da8;
+  --md-accent-fg-color: #ffc107;
+  --md-accent-fg-color--transparent: #ffc10710;
+}
+
+/* Custom logo styling */
+.md-header__title {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Custom admonition for Godot tips */
+.md-typeset .admonition.godot,
+.md-typeset details.godot {
+  border-color: #478cbf;
+}
+
+.md-typeset .godot > .admonition-title,
+.md-typeset .godot > summary {
+  background-color: #478cbf1a;
+  border-color: #478cbf;
+}
+
+.md-typeset .godot > .admonition-title::before,
+.md-typeset .godot > summary::before {
+  background-color: #478cbf;
+  -webkit-mask-image: var(--md-admonition-icon--tip);
+  mask-image: var(--md-admonition-icon--tip);
+}
+
+/* Custom styling for code blocks */
+.md-typeset .codehilite,
+.md-typeset .highlight {
+  border-radius: 0.2rem;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+
+/* Game screenshot styling */
+.game-screenshot {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Feature cards */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+  color: var(--md-primary-fg-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Progress bars */
+.progress-bar {
+  background-color: var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  height: 0.5rem;
+  margin: 0.5rem 0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background-color: var(--md-primary-fg-color);
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Team member cards */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.team-member {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 76.25em) {
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] {
+  .feature-card {
+    background: var(--md-code-bg-color);
+    border-color: var(--md-code-fg-color);
+  }
+  
+  .team-member {
+    background: var(--md-code-bg-color);
+    border-color: var(--md-code-fg-color);
+  }
+}
+
+/* Custom badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge--new {
+  background-color: var(--md-accent-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+.badge--updated {
+  background-color: #4caf50;
+  color: white;
+}
+
+.badge--experimental {
+  background-color: #ff9800;
+  color: white;
+}
+
+/* Syntax highlighting for GDScript */
+.language-gdscript .k { color: #ff6b6b; } /* Keywords */
+.language-gdscript .s { color: #4ecdc4; } /* Strings */
+.language-gdscript .c1 { color: #95a5a6; } /* Comments */
+.language-gdscript .nf { color: #f39c12; } /* Functions */
