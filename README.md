@@ -126,9 +126,9 @@ Veja todos os [contribuidores](https://github.com/MadDev/MadBoss/graphs/contribu
 
 ## 📊 Status do Projeto
 
-- 🚧 **Status**: Em desenvolvimento ativo
-- 📅 **Início**: Janeiro 2025
-- 🎯 **Versão**: v0.1.0-alpha
+- 🚧 **Status**: Não iniciado
+- 📅 **Início**: Mês/Ano
+- 🎯 **Versão**: v0.0.0
 - 📈 **Progresso**: [Roadmap](https://maddev.github.io/MadBoss/community/roadmap/)
 
 ## 🌟 Features Planejadas
