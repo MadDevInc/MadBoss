@@ -1,0 +1,53 @@
+<!-- Custom 404 page for MadBoss Wiki -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="md-content" style="text-align: center; padding: 4rem 1rem;">
+  <h1 style="font-size: 6rem; margin: 0; color: var(--md-primary-fg-color);">404</h1>
+  <h2 style="margin-bottom: 2rem;">Página não encontrada</h2>
+  
+  <div style="max-width: 600px; margin: 0 auto;">
+    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--md-default-fg-color--light);">
+      Ops! Parece que o boss final levou esta página para outra dimensão. 🎮
+    </p>
+    
+    <div style="background: var(--md-code-bg-color); border-radius: 0.5rem; padding: 2rem; margin: 2rem 0;">
+      <h3>O que você pode fazer:</h3>
+      <ul style="text-align: left; display: inline-block;">
+        <li>Verificar se a URL está correta</li>
+        <li>Voltar à <a href="{{ config.site_url }}">página inicial</a></li>
+        <li>Usar a <a href="{{ config.site_url }}search/">busca</a> para encontrar o que procura</li>
+        <li>Reportar um <a href="{{ config.repo_url }}/issues/new">problema</a> se acha que é um bug</li>
+      </ul>
+    </div>
+    
+    <a href="{{ config.site_url }}" class="md-button md-button--primary" style="margin: 1rem;">
+      🏠 Voltar ao início
+    </a>
+    
+    <a href="{{ config.site_url }}getting-started/" class="md-button" style="margin: 1rem;">
+      🚀 Guia de início
+    </a>
+  </div>
+  
+  <div style="margin-top: 3rem; font-size: 0.9rem; color: var(--md-default-fg-color--light);">
+    <p>Se você continuar tendo problemas, entre em contato conosco através do 
+    <a href="{{ config.repo_url }}/discussions">GitHub Discussions</a>.</p>
+  </div>
+</div>
+
+<style>
+.md-content {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 44.9375em) {
+  h1 {
+    font-size: 4rem !important;
+  }
+}
+</style>
+{% endblock %}

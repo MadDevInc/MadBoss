@@ -1,0 +1,208 @@
+site_name: MadBoss - Jogo Top-Down em Godot
+site_description: Wiki oficial do desenvolvimento do jogo MadBoss, um projeto open source em Godot 4.4
+site_author: Equipe MadDev
+site_url: https://maddev.github.io/MadBoss/
+
+# Repository
+repo_name: MadDev/MadBoss
+repo_url: https://github.com/MadDev/MadBoss
+edit_uri: edit/main/docs/
+
+# Configuration
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  
+  # Color scheme
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+
+  # Features
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+
+  # Language
+  language: pt
+
+# Plugins
+plugins:
+  - search:
+      lang: pt
+  - git-revision-date-localized:
+      type: date
+      locale: pt
+  - git-committers:
+      repository: MadDev/MadBoss
+      branch: main
+  - minify:
+      minify_html: true
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: MadDev
+      repo: MadBoss
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Extra
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/MadDev/MadBoss
+      name: GitHub Repository
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/your-discord
+      name: Discord Community
+  analytics:
+    provider: google
+    property: G-YOUR-ANALYTICS-ID
+  consent:
+    title: Consentimento de cookies
+    description: >- 
+      Utilizamos cookies para reconhecer suas visitas e preferências repetidas, bem como
+      para medir a eficácia da nossa documentação e se os usuários
+      encontram o que estão procurando. Com seu consentimento, você nos ajuda a
+      melhorar nossa documentação.
+
+# Extra CSS
+extra_css:
+  - stylesheets/extra.css
+
+# Extra JavaScript
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Navigation
+nav:
+  - Home: index.md
+  - Início Rápido:
+    - getting-started/index.md
+    - Instalação: getting-started/installation.md
+    - Primeiro Setup: getting-started/first-setup.md
+    - Contribuindo: getting-started/contributing.md
+  - Desenvolvimento:
+    - development/index.md
+    - Arquitetura: development/architecture.md
+    - Padrões de Código: development/coding-standards.md
+    - GDScript Guidelines: development/gdscript-guidelines.md
+    - Sistema de Versionamento: development/versioning.md
+  - Game Design:
+    - game-design/index.md
+    - Conceito do Jogo: game-design/game-concept.md
+    - Mecânicas: game-design/mechanics.md
+    - Arte e Assets: game-design/art-assets.md
+    - Audio: game-design/audio.md
+  - Tutoriais:
+    - tutorials/index.md
+    - Configurando Godot: tutorials/godot-setup.md
+    - Criando Personagens: tutorials/character-creation.md
+    - Sistema de Movimento: tutorials/movement-system.md
+    - Sistema de Combate: tutorials/combat-system.md
+    - UI e Menus: tutorials/ui-menus.md
+  - Ferramentas:
+    - tools/index.md
+    - Git Workflow: tools/git-workflow.md
+    - CI/CD: tools/ci-cd.md
+    - Testes: tools/testing.md
+    - Documentação: tools/documentation.md
+  - Comunidade:
+    - community/index.md
+    - Código de Conduta: community/code-of-conduct.md
+    - Guia de Contribuição: community/contributing-guide.md
+    - Issues e Bugs: community/issues-bugs.md
+    - Roadmap: community/roadmap.md
+  - API Reference:
+    - api/index.md
+    - Player: api/player.md
+    - Enemies: api/enemies.md
+    - Items: api/items.md
+    - World: api/world.md
